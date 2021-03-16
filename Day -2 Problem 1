@@ -1,0 +1,15 @@
+string removeConsecutiveDuplicates(string str) 
+{
+    int n = str.length(); //To find length of the string
+    string res = ""; //Initializing an empty string
+    res.push_back(str[0]); 
+
+    for (int i = 1; i < n; i++)
+    {
+        if (str[i] != str[i - 1])
+        {
+            res.push_back(str[i]);
+        }
+    }
+    return res;
+}
